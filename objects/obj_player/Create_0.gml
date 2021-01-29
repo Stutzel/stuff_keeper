@@ -8,5 +8,3 @@ h_speed = 0.;
 v_speed = 0.;
 
 max_speed = 2.0
-
-test = ["a", "b", "c", "d", "e"]

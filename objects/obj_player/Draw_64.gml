@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (place_meeting(x + interact_x, y + interact_y, obj_interactable)) {
-	if (key_interact) {
-		text = test[irandom_range(0,4)]
-		draw_text(50, 50, text)
-	}
+if (global.game_state == e_game_states.state_drawer) {
+	text = "You open a drawer, it's empty, this is just a test... Press E to go back to walking around."
+	draw_text(x - 250, y - 100, text)
 }

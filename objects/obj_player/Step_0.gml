@@ -37,3 +37,7 @@ if (place_meeting(x + h_speed, y + v_speed, obj_obstacle)) {
 
 x += h_speed;
 y += v_speed;
+
+//check facingfor interaction
+interact_x = lengthdir_x(interact_range, image_angle);
+interact_y = lengthdir_y(interact_range, image_angle);

@@ -6,7 +6,7 @@
     "path": "folders/Scripts/enums macros global vars.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_enums",
+  "name": "scr_globals",
   "tags": [],
   "resourceType": "GMScript",
 }

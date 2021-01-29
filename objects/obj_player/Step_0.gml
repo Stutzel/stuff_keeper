@@ -48,7 +48,8 @@ if (global.game_state == e_game_states.state_top_down) {
 			global.game_state = e_game_states.state_drawer;
 		}
 	}
-} else if (global.game_state == e_game_states.state_drawer) {
+} 
+else if (global.game_state == e_game_states.state_drawer) {
 	if (key_interact) {
 		global.game_state = e_game_states.state_top_down;
 	}

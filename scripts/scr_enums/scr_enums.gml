@@ -8,6 +8,7 @@ enum e_game_states{
 	state_top_down,
 	state_drawer,
 	state_day_end,
+	state_in_between_days,
 	state_game_over,
 	state_main_menu,
 	state_pause_menu

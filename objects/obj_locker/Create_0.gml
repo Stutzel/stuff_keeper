@@ -13,3 +13,6 @@ for (var i = 0; i < 3; i++) {
 }
 
 is_active = false;
+
+selection_x = 0;
+selection_y = 0;

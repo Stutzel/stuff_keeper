@@ -8,6 +8,7 @@ function input_hadler(){
 	key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
 
 	//Other input
+	key_enter = keyboard_check_pressed(vk_enter);
 	key_interact = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("E"));
 	key_cancel = keyboard_check_pressed(ord("Q"));
 	key_menu = keyboard_check_pressed(vk_escape);

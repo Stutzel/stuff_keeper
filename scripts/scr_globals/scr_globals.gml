@@ -1,4 +1,4 @@
-global.game_state = e_game_states.state_top_down;
+global.game_state = e_game_states.state_main_menu;
 
 global.current_game_day = 0;
 
@@ -6,4 +6,6 @@ global.found_items = ds_list_create(); //In this list will be added all the new 
 
 //creates list of possible items
 global.item_stats = ds_list_create();
+
+global.custommers = ds_list_create();
 

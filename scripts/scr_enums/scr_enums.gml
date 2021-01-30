@@ -4,9 +4,13 @@
 #region States Enums
 
 enum e_game_states{
+	state_day_start,
 	state_top_down,
 	state_drawer,
-	state_menu
+	state_day_end,
+	state_game_over,
+	state_main_menu,
+	state_pause_menu
 }
 
 #endregion
@@ -20,7 +24,8 @@ enum e_item_stats{
 	item_details,
 	item_color_id,
 	item_owner_name,
-	item_owner_id
+	item_owner_id,
+	item_day_found
 }
 
 enum e_item_types {
@@ -36,6 +41,11 @@ enum e_item_types {
 
 #region Custommer Enums
 
-
+enum e_custommer_stats{
+	custommer_id,
+	custommer_name,
+	custommer_sprite,
+	
+}
 
 #endregion

@@ -29,13 +29,4 @@ for (var i = 0; i < e_item_types.last; i++) {
 	global.item_stats[| i] = list;
 }
 
-//popualte the items found list
-for (var i = 0; i < 18; i ++) {
-	var item = generate_new_item();
-	global.found_items[| i] = item;
-}
-
-
-
-
 

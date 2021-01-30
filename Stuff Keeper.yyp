@@ -5,6 +5,7 @@
     {"id":{"name":"spr_obstacle","path":"sprites/spr_obstacle/spr_obstacle.yy",},"order":1,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":0,},
     {"id":{"name":"spr_lighter","path":"sprites/spr_lighter/spr_lighter.yy",},"order":1,},
+    {"id":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},"order":1,},
     {"id":{"name":"spr_keys","path":"sprites/spr_keys/spr_keys.yy",},"order":3,},
     {"id":{"name":"spr_umbrella","path":"sprites/spr_umbrella/spr_umbrella.yy",},"order":2,},
     {"id":{"name":"obj_obstacle","path":"objects/obj_obstacle/obj_obstacle.yy",},"order":1,},
@@ -18,7 +19,7 @@
     {"id":{"name":"spr_drawer","path":"sprites/spr_drawer/spr_drawer.yy",},"order":5,},
     {"id":{"name":"spr_wallet","path":"sprites/spr_wallet/spr_wallet.yy",},"order":5,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"rm_gameplay_screen","path":"rooms/rm_gameplay_screen/rm_gameplay_screen.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},
@@ -34,7 +35,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
+    {"roomId":{"name":"rm_gameplay_screen","path":"rooms/rm_gameplay_screen/rm_gameplay_screen.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

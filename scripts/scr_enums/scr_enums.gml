@@ -12,7 +12,9 @@ enum e_item_stats{
 	item_name,
 	item_color,
 	item_details,
-	item_color_id
+	item_color_id,
+	item_owner_name,
+	item_owner_id
 }
 
 enum e_item_types {

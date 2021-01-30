@@ -12,8 +12,9 @@ function generate_new_item(){
 	var details = item_details[| e_item_stats.item_details];
 	var detail_i = irandom_range(0, 2);
 	var detail = details[detail_i]
+	var entry_day = 0;
 	
-	var new_item = [item_sprite, item_name, color, detail, color_i];
+	var new_item = [item_sprite, item_name, color, detail, color_i, entry_day];
 	
 	return new_item;
 }

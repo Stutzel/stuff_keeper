@@ -1,6 +1,7 @@
 /// @description Create Items, game parameters and more
 randomize();
 
+// Create the list with açll item combinations
 var item_sprites = [spr_wallet, spr_cellphone, spr_keys, spr_lighter, spr_umbrella];
 
 var item_names = ["wallet", "cellphone", "keys", "lighter", "umbrella"];
@@ -28,4 +29,13 @@ for (var i = 0; i < e_item_types.last; i++) {
 	global.item_stats[| i] = list;
 }
 
-test_item = generate_new_item();
+//popualte the items found list
+for (var i = 0; i < 18; i ++) {
+	var item = generate_new_item();
+	global.found_items[| i] = item;
+}
+
+
+
+
+

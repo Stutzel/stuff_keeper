@@ -35,10 +35,16 @@ if (global.game_state == e_game_states.state_top_down) {
 	//check facingfor interaction
 	interact_x = lengthdir_x(interact_range, image_angle);
 	interact_y = lengthdir_y(interact_range, image_angle);
-
+	
+	interact = instance_nearest(x + interact_x, y + interact_y, obj_interactable);
+	
 	if (place_meeting(x + interact_x, y + interact_y, obj_interactable)) {
 		if (key_interact) {
 			global.game_state = e_game_states.state_drawer;
+			with (interact) {
+				is_active = true;
+		    }
 		}
 	}
+	
 }

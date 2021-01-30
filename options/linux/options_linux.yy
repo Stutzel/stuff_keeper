@@ -1,5 +1,5 @@
 {
-  "option_linux_display_name": "Created with GameMaker Studio 2",
+  "option_linux_display_name": "Stuff Keeper",
   "option_linux_version": "1.0.0.0",
   "option_linux_maintainer_email": "",
   "option_linux_homepage": "http://www.yoyogames.com",
@@ -9,8 +9,8 @@
   "option_linux_display_splash": false,
   "option_linux_icon": "${base_options_dir}/linux/icons/64.png",
   "option_linux_start_fullscreen": false,
-  "option_linux_allow_fullscreen": false,
-  "option_linux_interpolate_pixels": true,
+  "option_linux_allow_fullscreen": true,
+  "option_linux_interpolate_pixels": false,
   "option_linux_display_cursor": true,
   "option_linux_sync": false,
   "option_linux_resize_window": false,

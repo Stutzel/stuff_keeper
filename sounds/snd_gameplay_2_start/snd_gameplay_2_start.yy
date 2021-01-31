@@ -10,7 +10,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_gameplay_2_start.wav",
+  "soundFile": "snd_gameplay_2_start.ogg",
   "duration": 56.84711,
   "parent": {
     "name": "Sounds",

@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function state_day_end(){
-
+	global.game_state = e_game_states.state_in_between_days
 }
 
 function state_day_start(){
@@ -33,7 +33,8 @@ function state_main_menu(){
 	if (key_enter) {
 		if (room == rm_main_menu) {
 			room_goto(rm_gameplay_screen);
-			audio_play_sound(snd_gameplay_2_start,10, false);
+			audio_stop_sound(snd_title_screen);
+			audio_play_sound(current_start,10, false);
 			global.game_state = e_game_states.state_in_between_days;
 		}
 	}

@@ -29,4 +29,14 @@ for (var i = 0; i < e_item_types.last; i++) {
 	global.item_stats[| i] = list;
 }
 
+audio_play_sound(snd_title_screen, 10, true);
+
+soundtrack_start = [snd_gameplay_1_start, snd_gameplay_2_start];
+soundtrack_loop = [snd_gameplay_1_loop, snd_gameplay_2_loop];
+
+current_start = snd_gameplay_1_start;
+current_loop = snd_gameplay_1_loop;
+
+//Create current customer line
+current_customer_line = ds_list_create();
 

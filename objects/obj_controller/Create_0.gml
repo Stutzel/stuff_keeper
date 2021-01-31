@@ -39,4 +39,3 @@ current_loop = snd_gameplay_1_loop;
 
 //Create current customer line
 current_customer_line = ds_list_create();
-

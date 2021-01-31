@@ -16,3 +16,6 @@ global.names_list = load_csv("names_list.csv");//i - column; j - line
 
 //player global var
 global.satisfaction = 100;
+
+//Held item
+global.held_item = noone;

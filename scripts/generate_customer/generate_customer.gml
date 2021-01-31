@@ -14,11 +14,12 @@ function generate_customer(item_name, item_color, item_detail, item_entry_day){
 	
 	var return_chance = irandom(100);
 	
-	if (return_chance <= 10) {
+	if (return_chance <= 10 && global.current_game_day > 1) {
 		var customer = [customer_id, name];
 		return customer;
 	} else {
-		var returns_in = item_entry_day + irandom(15);
+		var max_time = global.current_game_day * global.current_game_day;
+		var returns_in = item_entry_day + irandom(max_time);
 		var item = [item_name, item_color, item_detail, item_entry_day];
 		var customer = [customer_id, name, spr_customer, returns_in, item];
 		ds_list_add(global.customers, customer);

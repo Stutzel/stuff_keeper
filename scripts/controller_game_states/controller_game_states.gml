@@ -6,7 +6,9 @@ function state_day_end(){
 
 function state_day_start(){
 	//Do Stud of beggining of day here
-	global.game_state = e_game_states.state_top_down;
+	if (ds_list_size(global.found_items) <= 0 || keyboard_check_pressed(vk_control)) { 
+		global.game_state = e_game_states.state_top_down;
+	}
 }
 
 function state_drawer(){
@@ -16,17 +18,25 @@ function state_drawer(){
 }
 
 function state_game_over(){
-
+	if (key_cancel || key_enter) {
+		audio_stop_all();
+		audio_play_sound(snd_title_screen, 10, true);
+		room_goto(rm_main_menu);
+		global.game_state = e_game_states.state_main_menu;
+	}
 }
 
 function state_in_between_days(){
 	global.current_game_day += 1;
 	var n_found_items = 3 * global.current_game_day;
+	if (n_found_items > 16) {
+		n_found_items = 16;
+	}
 	for (var i = 0; i < n_found_items; i++) {
 		var item = generate_new_item(global.current_game_day);
 		global.found_items[|i] = item;
 	}
-	
+	current_customer_line = form_customer_line(current_customer_line);
 	global.game_state = e_game_states.state_day_start;
 }
 

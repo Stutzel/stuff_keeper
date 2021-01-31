@@ -39,7 +39,7 @@ function player_game_state_topdown(){
 	interact = instance_nearest(x + interact_x, y + interact_y, obj_interactable);
 	
 	if (place_meeting(x + interact_x, y + interact_y, obj_interactable)) {
-		if (key_interact) {
+		if (key_interact && global.held_item == noone) {
 			global.game_state = e_game_states.state_drawer;
 			with (interact) {
 				is_active = true;

@@ -13,9 +13,12 @@ if (global.game_state == e_game_states.state_drawer) {
 		for (var i = 0; i < 4; i++) {
 				if (contents[| i] != noone) {
 					var item = contents[| i];
-					draw_sprite(item[e_item_stats.item_sprite], item[e_item_stats.item_color_id], 100 , 100 + i * 64)
+					draw_sprite(item[e_item_stats.item_sprite], item[e_item_stats.item_color_id], xx - 32 , 130 + i * 146)
 			}
 		}
+		var selection_xx = xx - 270;
+		var selection_yy = 130 + selection * 146;
+		draw_sprite(spr_selection, 0, selection_xx, selection_yy);
 	}
 } else if (global.game_state == e_game_states.stae_day_start_drawer) {
 	if (is_active) {
@@ -28,8 +31,11 @@ if (global.game_state == e_game_states.state_drawer) {
 		for (var i = 0; i < 4; i++) {
 				if (contents[| i] != noone) {
 					var item = contents[| i];
-					draw_sprite(item[e_item_stats.item_sprite], item[e_item_stats.item_color_id], 100 , 100 + i * 64)
+					draw_sprite(item[e_item_stats.item_sprite], item[e_item_stats.item_color_id], xx -32 , 130 + i * 146)
 			}
 		}
+		var selection_xx = xx - 270;
+		var selection_yy = 130 + selection * 146;
+		draw_sprite(spr_selection, 0, selection_xx, selection_yy);
 	}
 }

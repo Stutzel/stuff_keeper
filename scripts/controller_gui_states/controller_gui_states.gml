@@ -44,10 +44,7 @@ function day_start_gui() {
 		draw_text(xx + 70, yy + 32, item_text);
 	}
 	var select_xx = xx - 70;
-	var selected_i = current_selected_item;
-	if (selected_i > 4) {
-		selected_i = 4;
-	}
+	var selected_i = current_selected_item - last_shown_item + 4;
 	var select_yy = 144 + 64 * selected_i;
 	draw_sprite(spr_selection, 0, select_xx, select_yy);	
 }

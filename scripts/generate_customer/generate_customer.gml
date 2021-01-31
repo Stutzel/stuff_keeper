@@ -18,7 +18,7 @@ function generate_customer(item_name, item_color, item_detail, item_entry_day){
 		var customer = [customer_id, name];
 		return customer;
 	} else {
-		var returns_in = item_entry_day + irandom_range(1, 15);
+		var returns_in = item_entry_day + irandom(15);
 		var item = [item_name, item_color, item_detail, item_entry_day];
 		var customer = [customer_id, name, spr_customer, returns_in, item];
 		ds_list_add(global.customers, customer);

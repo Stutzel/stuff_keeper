@@ -26,6 +26,7 @@ function state_in_between_days(){
 		var item = generate_new_item(global.current_game_day);
 		global.found_items[|i] = item;
 	}
+	
 	global.game_state = e_game_states.state_day_start;
 }
 

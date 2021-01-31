@@ -14,6 +14,11 @@ enum e_game_states{
 	state_pause_menu
 }
 
+enum e_player_states{
+	state_standing,
+	state_walking
+}
+
 #endregion
 
 #region Item enums

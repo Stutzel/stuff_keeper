@@ -19,6 +19,22 @@ if (global.game_state == e_game_states.state_drawer) {
 		var selection_xx = xx - 270;
 		var selection_yy = 130 + selection * 146;
 		draw_sprite(spr_selection, 0, selection_xx, selection_yy);
+		
+		var tag_xx = xx + 150;
+		var tag_yy = 50;
+		draw_sprite(spr_tag, 0, tag_xx, tag_yy);
+		
+		var item = contents[| selection];
+		if (item != noone) {
+			var item_color = item[e_item_stats.item_color];
+			var item_name = item[e_item_stats.item_name];
+			var item_details = item[e_item_stats.item_details];
+			var item_days = global.current_game_day - item[e_item_stats.item_day_found];
+			var text = item_color + "\n" + item_name + "\n" + item_details + "\n Found " + string(item_days) + " days ago";  
+			draw_set_halign(fa_middle);
+			draw_set_valign(fa_center);
+			draw_text(xx + 350, yy, text);
+		}
 	}
 } else if (global.game_state == e_game_states.stae_day_start_drawer) {
 	if (is_active) {
@@ -37,5 +53,21 @@ if (global.game_state == e_game_states.state_drawer) {
 		var selection_xx = xx - 270;
 		var selection_yy = 130 + selection * 146;
 		draw_sprite(spr_selection, 0, selection_xx, selection_yy);
+		
+		var tag_xx = xx + 150;
+		var tag_yy = 50;
+		draw_sprite(spr_tag, 0, tag_xx, tag_yy);
+		
+		var item = contents[| selection];
+		if (item != noone) {
+			var item_color = item[e_item_stats.item_color];
+			var item_name = item[e_item_stats.item_name];
+			var item_details = item[e_item_stats.item_details];
+			var item_days = global.current_game_day - item[e_item_stats.item_day_found];
+			var text = item_color + "\n" + item_name + "\n" + item_details + "\n Found " + string(item_days) + " days ago";  
+			draw_set_halign(fa_middle);
+			draw_set_valign(fa_center);
+			draw_text(xx + 350, yy, text);
+		}
 	}
 }

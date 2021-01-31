@@ -38,12 +38,39 @@ function player_game_state_topdown(){
 	
 	interact = instance_nearest(x + interact_x, y + interact_y, obj_interactable);
 	
-	if (place_meeting(x + interact_x, y + interact_y, obj_interactable)) {
+	if (place_meeting(x + interact_x, y + interact_y, obj_locker)) {
 		if (key_interact && global.held_item == noone) {
 			global.game_state = e_game_states.state_drawer;
 			with (interact) {
 				is_active = true;
 		    }
+		}
+	}
+	if (place_meeting(x + interact_x, y + interact_y, obj_balcony)) {
+		if (key_interact && global.held_item != noone) {
+			var held_id = global.held_item[e_item_stats.item_owner_id];
+			if (held_id == global.current_customer_id) {
+				with(interact) {
+					global.held_item = noone;
+					patience = 100;
+					ds_list_delete(global.current_customer_line, 0);
+					if (ds_list_size(global.current_customer_line) > 0){
+						var customer = global.current_customer_line[| 0];
+						global.current_customer_id = customer[e_customer_stats.customer_id];
+					}
+				}
+			}else {
+				with(interact) {
+					global.satisfaction -= global.current_game_day * 0.5 ;
+					global.held_item = noone;
+					patience = 100;
+					ds_list_delete(global.current_customer_line, 0);
+					if (ds_list_size(global.current_customer_line) > 0){
+						var customer = global.current_customer_line[| 0];
+						global.current_customer_id = customer[e_customer_stats.customer_id];
+					}
+				}
+			}
 		}
 	}
 }
@@ -86,7 +113,7 @@ function player_game_state_day_start() {
 	
 	interact = instance_nearest(x + interact_x, y + interact_y, obj_interactable);
 	
-	if (place_meeting(x + interact_x, y + interact_y, obj_interactable)) {
+	if (place_meeting(x + interact_x, y + interact_y, obj_locker)) {
 		if (key_interact) {
 			global.game_state = e_game_states.stae_day_start_drawer;
 			with (interact) {

@@ -1,6 +1,10 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function state_day_end(){
+	global.satisfaction += 1/global.current_game_day;
+	if (global.satisfaction > 100) {
+		global.satisfaction = 100;
+	}
 	global.game_state = e_game_states.state_in_between_days
 }
 
@@ -35,6 +39,11 @@ function state_day_start(){
 	}
 	
 	if (ds_list_size(global.found_items) <= 0  && global.held_item == noone) { 
+		if (ds_list_size(global.current_customer_line) > 0) {
+			var customer = global.current_customer_line[| 0];
+			var customer_id = customer[e_customer_stats.customer_id];
+			global.current_customer_id = customer_id;
+		}
 		global.game_state = e_game_states.state_top_down;
 	}
 }
@@ -65,7 +74,7 @@ function state_in_between_days(){
 		var item = generate_new_item(global.current_game_day);
 		global.found_items[|i] = item;
 	}
-	current_customer_line = form_customer_line(current_customer_line);
+	global.current_customer_line = form_customer_line(global.current_customer_line);
 	global.game_state = e_game_states.state_day_start;
 }
 
@@ -87,6 +96,12 @@ function state_pause_menu(){
 }
 
 function state_top_down(){
+	if (global.satisfaction == 0) {
+		global.game_state = e_game_states.state_game_over;
+	}
+	if (ds_list_size(global.current_customer_line) <= 0) {
+		global.game_state = e_game_states.state_day_end;
+	}
 	if (key_menu) {
 		global.game_state = e_game_states.state_pause_menu;
 	}

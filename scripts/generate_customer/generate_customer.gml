@@ -20,6 +20,9 @@ function generate_customer(item_name, item_color, item_detail, item_entry_day){
 	} else {
 		var max_time = global.current_game_day * global.current_game_day;
 		var returns_in = item_entry_day + irandom(max_time);
+		if (global.current_game_day == 1) {
+			returns_in = 1;
+		}
 		var item = [item_name, item_color, item_detail, item_entry_day];
 		var customer = [customer_id, name, spr_customer, returns_in, item];
 		ds_list_add(global.customers, customer);

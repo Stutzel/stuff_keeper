@@ -3,8 +3,6 @@
 function form_customer_line(customer_line){
 	ds_list_clear(customer_line);
 	//var n_total = ds_list_size(global.customers);
-	var remove_i = [];
-	var k = 0;
 	for (var i = 0; i < ds_list_size(global.customers); i++) {
 		var customer = global.customers[| i];
 		var is_returning = customer[e_customer_stats.customer_returns_in];
@@ -13,14 +11,7 @@ function form_customer_line(customer_line){
 			ds_list_add(customer_line, customer);
 			ds_list_delete(global.customers, i);
 			i--;
-		//	remove_i[k] = i;
-		//	k++
 		}
 	}
-	//for (var i = 0; i < array_length(remove_i); i++) {
-	//	var to_remove = remove_i[k];
-	//	ds_list_delete(global.customers, to_remove)
-	//}
-	
 	return customer_line;
 }

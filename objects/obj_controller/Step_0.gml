@@ -34,10 +34,6 @@ if (global.game_state == e_game_states.state_main_menu) {
 		audio_play_sound(current_loop, 10, true);
 	}
 	
-	if (key_cancel) {
-		global.game_state = e_game_states.state_day_end;
-	}
-	
 	if keyboard_check_pressed(vk_control) {
 		room_goto(rm_game_over);
 		audio_stop_all();

@@ -11,6 +11,8 @@ global.customers = ds_list_create();
 
 //Customer global vars
 global.current_customer_id = 1;
+//Create current customer line
+global.current_customer_line = ds_list_create();
 
 global.names_list = load_csv("names_list.csv");//i - column; j - line
 

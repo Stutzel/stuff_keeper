@@ -1,10 +1,10 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function main_menu_gui(){
-	draw_set_colour(c_white);
+	draw_set_colour(c_black);
 	draw_set_halign(fa_middle);
 	draw_set_valign(fa_center);
-	draw_text(640, 360, "Press Enter to Start");
+	draw_text_transformed(640, 360, "Press Enter to Start", 2, 2, 0);
 }
 
 function top_down_gui(){

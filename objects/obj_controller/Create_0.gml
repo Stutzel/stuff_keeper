@@ -37,8 +37,7 @@ soundtrack_loop = [snd_gameplay_1_loop, snd_gameplay_2_loop];
 current_start = snd_gameplay_1_start;
 current_loop = snd_gameplay_1_loop;
 
-//Create current customer line
-current_customer_line = ds_list_create();
+
 
 //day start variables
 current_selected_item = 0;

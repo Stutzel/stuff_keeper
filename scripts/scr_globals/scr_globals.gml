@@ -9,6 +9,10 @@ global.item_stats = ds_list_create();
 
 global.customers = ds_list_create();
 
+//Customer global vars
 global.current_customer_id = 1;
 
 global.names_list = load_csv("names_list.csv");//i - column; j - line
+
+//player global var
+global.satisfaction = 100;

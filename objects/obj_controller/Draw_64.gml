@@ -8,7 +8,11 @@ if ( global.game_state == e_game_states.state_main_menu) {
 	day_start_gui();
 } else if (global.game_state == e_game_states.state_top_down) {
 	top_down_gui();
-	show_satisfaction();
+	
 } else if(global.game_state == e_game_states.state_game_over) {
 	game_over_gui();
+}
+
+if (global.game_state != e_game_states.state_main_menu && global.game_state != e_game_states.state_game_over) {
+	show_satisfaction();
 }

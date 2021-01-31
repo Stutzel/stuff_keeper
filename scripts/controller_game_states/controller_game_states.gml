@@ -96,7 +96,7 @@ function state_pause_menu(){
 }
 
 function state_top_down(){
-	if (global.satisfaction == 0) {
+	if (global.satisfaction <= 0) {
 		global.game_state = e_game_states.state_game_over;
 	}
 	if (ds_list_size(global.current_customer_line) <= 0) {

@@ -11,7 +11,6 @@ function top_down_gui(){
 	draw_set_color(c_black);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
-	draw_text(50, 50, "Controls: - Arrows or WASD to move \n \t - E to interact \n Day: " + string(global.current_game_day));
 }
 
 function day_start_gui() {
@@ -19,9 +18,7 @@ function day_start_gui() {
 	draw_set_color(c_black);
 	draw_set_halign(fa_middle);
 	draw_set_valign(fa_center);
-	var instructions = "Item controls: -Up/Down to move cursor \n -E to get item \n Q to throw item away";
 	var text = "Found Items: x/" + string(ds_list_size(global.found_items))
-	draw_text(window_get_width() - 250, 50, instructions);
 	draw_text(200, 120, text);
 	var xx = 87;
 	var max_item = ds_list_size(global.found_items);

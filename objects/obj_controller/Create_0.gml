@@ -39,3 +39,8 @@ current_loop = snd_gameplay_1_loop;
 
 //Create current customer line
 current_customer_line = ds_list_create();
+
+//day start variables
+current_selected_item = 0;
+last_shown_item = 4;
+is_selected = false;

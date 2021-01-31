@@ -20,6 +20,9 @@ if (global.game_state == e_game_states.state_main_menu) {
 	state_day_end();
 } else if (global.game_state == e_game_states.state_pause_menu) {
 	state_pause_menu();
+	if (!audio_is_playing(current_start) && !audio_is_playing(current_loop)) {
+		audio_play_sound(current_loop, 10, true);
+	}
 } else if (global.game_state == e_game_states.state_top_down) {
 	state_top_down();
 	if (!audio_is_playing(current_start) && !audio_is_playing(current_loop)) {

@@ -4,7 +4,9 @@
 
 if (global.game_state == e_game_states.state_drawer) {
 	if (is_active) {
-		draw_sprite(spr_drawer, 0, 50, 50);
+		var xx = view_get_wport(view_camera[0])/2;
+		var yy = view_get_hport(view_camera[0])/2;
+		draw_sprite(spr_drawer, 0, xx, yy);
 		for (var i = 0; i < 4; i++) {
 				if (contents[| i] != noone) {
 					var item = contents[| i];

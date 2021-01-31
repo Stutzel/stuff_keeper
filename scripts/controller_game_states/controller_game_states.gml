@@ -6,26 +6,41 @@ function state_day_end(){
 
 function state_day_start(){
 	//Do Stud of beggining of day here
-	if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))) {
-		current_selected_item--;
-		if (current_selected_item < 0) {
-			current_selected_item = 0;
+	if (global.held_item == noone) {
+		if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))) {
+			current_selected_item--;
+			if (current_selected_item < 0) {
+				current_selected_item = 0;
+			}
+			if (current_selected_item < last_shown_item - 4) {
+				last_shown_item = current_selected_item + 4;
+			}
+		} else if (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))) {
+			current_selected_item++;
+			if (current_selected_item >= ds_list_size(global.found_items) -1) {
+				current_selected_item = ds_list_size(global.found_items) -1;
+			}
+			if (current_selected_item > last_shown_item) {
+				last_shown_item = current_selected_item;
+			}
 		}
-		if (current_selected_item < last_shown_item - 4) {
-			last_shown_item = current_selected_item + 4;
+		if (key_interact) {
+			var item = global.found_items[| current_selected_item];
+			global.held_item = item;
+			ds_list_delete(global.found_items, current_selected_item);
 		}
-	} else if (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))) {
-		current_selected_item++;
-		if (current_selected_item >= ds_list_size(global.found_items) -1) {
-			current_selected_item = ds_list_size(global.found_items) -1;
-		}
-		if (current_selected_item > last_shown_item) {
-			last_shown_item = current_selected_item;
+		if (key_cancel) {
+			ds_list_delete(global.found_items, current_selected_item);
 		}
 	}
-	
-	if (ds_list_size(global.found_items) <= 0 || keyboard_check_pressed(vk_control)) { 
+	if (ds_list_size(global.found_items) <= 0  && global.held_item == noone) { 
 		global.game_state = e_game_states.state_top_down;
+	}
+}
+
+function state_day_start_drawer() {
+	if (key_cancel || key_menu) {
+		global.game_state = e_game_states.state_day_start;
 	}
 }
 

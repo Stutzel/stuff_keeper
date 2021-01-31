@@ -12,7 +12,12 @@ if (global.game_state == e_game_states.state_main_menu) {
 	if (!audio_is_playing(current_start) && !audio_is_playing(current_loop)) {
 		audio_play_sound(current_loop, 10, true);
 	}
-} else if (global.game_state == e_game_states.state_day_end) {
+} else if (global.game_state == e_game_states.stae_day_start_drawer) {
+	state_day_start_drawer();
+	if (!audio_is_playing(current_start) && !audio_is_playing(current_loop)) {
+		audio_play_sound(current_loop, 10, true);
+	}
+}else if (global.game_state == e_game_states.state_day_end) {
 	audio_stop_all();
 	var audio_i = global.current_game_day mod 2;
 	current_start = soundtrack_start[audio_i];

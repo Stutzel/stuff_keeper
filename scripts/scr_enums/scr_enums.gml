@@ -40,13 +40,14 @@ enum e_item_types {
 
 #endregion
 
-#region Custommer Enums
+#region Customer Enums
 
-enum e_custommer_stats{
-	custommer_id,
-	custommer_name,
-	custommer_sprite,
-	
+enum e_customer_stats{
+	customer_id,
+	customer_name,
+	customer_sprite,
+	customer_returns_in,
+	customer_item
 }
 
 #endregion

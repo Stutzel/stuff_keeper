@@ -24,6 +24,8 @@
     {"id":{"name":"input_hadler","path":"scripts/input_hadler/input_hadler.yy",},"order":0,},
     {"id":{"name":"main_menu_gui","path":"scripts/main_menu_gui/main_menu_gui.yy",},"order":0,},
     {"id":{"name":"spr_cellphone","path":"sprites/spr_cellphone/spr_cellphone.yy",},"order":4,},
+    {"id":{"name":"spr_customer","path":"sprites/spr_customer/spr_customer.yy",},"order":7,},
+    {"id":{"name":"generate_customer","path":"scripts/generate_customer/generate_customer.yy",},"order":2,},
     {"id":{"name":"spr_drawer","path":"sprites/spr_drawer/spr_drawer.yy",},"order":5,},
     {"id":{"name":"state_in_between_days","path":"scripts/state_in_between_days/state_in_between_days.yy",},"order":1,},
     {"id":{"name":"spr_wallet","path":"sprites/spr_wallet/spr_wallet.yy",},"order":5,},
@@ -69,8 +71,9 @@
     {"folderPath":"folders/Objects/controllers.yy","order":5,"resourceVersion":"1.0","name":"controllers","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/parent objects.yy","order":6,"resourceVersion":"1.0","name":"parent objects","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/UI.yy","order":6,"resourceVersion":"1.0","name":"UI","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Scripts/games state controllers.yy","order":3,"resourceVersion":"1.0","name":"games state controllers","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Scripts/game state draw GUI events.yy","order":4,"resourceVersion":"1.0","name":"game state draw GUI events","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/controller scripts/games state controllers.yy","order":1,"resourceVersion":"1.0","name":"games state controllers","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/controller scripts/game state draw GUI events.yy","order":0,"resourceVersion":"1.0","name":"game state draw GUI events","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/controller scripts.yy","order":5,"resourceVersion":"1.0","name":"controller scripts","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
@@ -78,7 +81,9 @@
   "TextureGroups": [
     {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
   ],
-  "IncludedFiles": [],
+  "IncludedFiles": [
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"names_list.csv","resourceType":"GMIncludedFile",},
+  ],
   "MetaData": {
     "IDEVersion": "2.3.1.542",
   },
